@@ -2,7 +2,7 @@ package dhbw;
 
 import java.util.Scanner;
 
-public class Timetracker {
+public class TimeTracker {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -17,15 +17,7 @@ public class Timetracker {
                 // TODO do login
                 running = false;
             } else if (input.equalsIgnoreCase("n")) {
-
-                System.out.println("Benutzername?");
-                String username = scanner.nextLine();
-
-                System.out.println("Passwort?");
-                String password = scanner.nextLine();
-
-                System.out.println("User " + username + "  | password: " + password);
-
+                new TimeTrackerRegistration().registrationProcess();
             } else {
                 System.out.println("Falsche Eingabe.");
             }
