@@ -17,7 +17,15 @@ public class Timetracker {
                 // TODO do login
                 running = false;
             } else if (input.equalsIgnoreCase("n")) {
-                // TODO register
+
+                System.out.println("Benutzername?");
+                String username = scanner.nextLine();
+
+                System.out.println("Passwort?");
+                String password = scanner.nextLine();
+
+                System.out.println("User " + username + "  | password: " + password);
+
             } else {
                 System.out.println("Falsche Eingabe.");
             }
