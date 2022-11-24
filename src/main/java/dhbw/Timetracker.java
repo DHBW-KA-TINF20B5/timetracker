@@ -5,18 +5,24 @@ import java.util.Scanner;
 public class Timetracker {
 
     public static void main(String[] args) {
-        System.out.println("Haben Sie bereits ein Konto? (j/n)");
         Scanner scanner = new Scanner(System.in);
-        String input = scanner.nextLine();
+        boolean running = true;
 
-        if(input.equalsIgnoreCase("j") ) {
-            // TODO do login
-        } else if (input.equalsIgnoreCase("n")) {
-            // TODO register
-        } else {
-            System.out.println("Falsche Eingabe.");
+        while (running) {
+
+            System.out.println("Haben Sie bereits ein Konto? (j/n)");
+            String input = scanner.nextLine();
+
+            if (input.equalsIgnoreCase("j")) {
+                // TODO do login
+                running = false;
+            } else if (input.equalsIgnoreCase("n")) {
+                // TODO register
+            } else {
+                System.out.println("Falsche Eingabe.");
+            }
+
+            System.out.println("Input: " + input);
         }
-
-        System.out.println("Input: " + input);
     }
 }
